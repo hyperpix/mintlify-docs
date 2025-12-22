@@ -1,0 +1,8 @@
+{
+  "track_id": "core_payfac_api_sdk_20251223",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2025-12-23T01:18:00Z",
+  "updated_at": "2025-12-23T01:18:00Z",
+  "description": "Develop Core PayFac API & SDK including usage ingestion, customer management, and billing endpoints."
+}
