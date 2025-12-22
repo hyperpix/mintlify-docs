@@ -8,7 +8,7 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: API Infrastructure & Usage Ingestion' (Protocol in workflow.md) [checkpoint: 2a92d96]
 
 ## Phase 2: Customer & Billing APIs
-- [ ] Task: Implement Customer API endpoints (`/api/v1/customers`).
+- [x] Task: Implement Customer API endpoints (`/api/v1/customers`). [a96dc5c]
 - [ ] Task: Implement Billing/Invoice retrieval endpoints (`/api/v1/invoices`).
 - [ ] Task: Write integration tests for customer and billing flows.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Customer & Billing APIs' (Protocol in workflow.md)
