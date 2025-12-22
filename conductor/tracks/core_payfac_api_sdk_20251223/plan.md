@@ -12,7 +12,7 @@
 - [x] Task: Implement Billing/Invoice retrieval endpoints (`/api/v1/invoices`). [01c323d]
 - [x] Task: Write integration tests for customer and billing flows. [df994ad]
 - [x] Task: Implement Entitlements/Usage Check endpoint (`/api/v1/entitlements`). [eca3270]
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Customer & Billing APIs' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Customer & Billing APIs' (Protocol in workflow.md) [checkpoint: b95429f]
 
 ## Phase 3: Server-Side SDK Development
 - [ ] Task: Scaffold the TypeScript SDK structure.
