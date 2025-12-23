@@ -24,7 +24,7 @@ Goal: Achieve "instant" perceived loading for metadata and core organization set
     - [ ] Minimize the loading state for the page header to improve perceived speed.
     - [ ] Ensure the "Free Plan" and other core model data are fetched with higher priority.
 - [x] Task: Accelerate Settings Page Data Loading (ad27222)
-    - [ ] Review the `SettingsPage` loading logic (currently fetches profile, api keys, and apps in one large `Promise.all`).
-    - [ ] Split the fetching logic so "Organization" and "Address" data are rendered immediately upon availability.
-    - [ ] Optimize the database query or server action for merchant profiles if necessary.
+- [x] Task: Implement Skeletons for Pricing Model Tables (3d29312)
+    - [ ] Add `isLoading` state to `PricingModelDetailsClient`.
+    - [ ] Update table rendering to show `TablePlaceholder` or inline skeleton rows while `isLoading` is true.
 - [ ] Task: Conductor - User Manual Verification 'Phase 2: Performance & Data Fetching Optimization' (Protocol in workflow.md)
