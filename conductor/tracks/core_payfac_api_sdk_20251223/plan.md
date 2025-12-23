@@ -21,9 +21,9 @@
 - [x] Task: Create a sample integration script using the SDK. [2a2bb56]
 - [x] Task: Conductor - User Manual Verification 'Phase 3: SDK Development' (Protocol in workflow.md) [checkpoint: 9ce9288]
 
-## Phase 4: Checkout Infrastructure & Client SDK
+## Phase 4: Checkout Infrastructure & Client SDK [checkpoint: 36b4cc3]
 - [x] Task: Implement Checkout Session API (`/api/v1/checkout/sessions`). [3c0d0e1]
 - [x] Task: Scaffold Client-Side SDK (checkout.js / React components). [556de58]
 - [x] Task: Implement `createCheckoutSession` and frontend mounting logic. [d4798de]
 - [x] Task: Build Custom Checkout UI components (Payment Element). [66995ea]
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Checkout Infrastructure' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 4: Checkout Infrastructure' (Protocol in workflow.md) [checkpoint: 36b4cc3]
