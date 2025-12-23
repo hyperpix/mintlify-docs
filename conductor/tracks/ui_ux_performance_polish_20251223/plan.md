@@ -9,7 +9,7 @@ Goal: Enhance navigation and loading feedback for Invoices and Recurring payment
     - [ ] Locate the existing Invoice Detail Dialog component.
     - [ ] Update `InvoicesClient` to import and manage the dialog state.
     - [ ] Modify the table row click handler to open the dialog with the selected invoice data.
-- [ ] Task: Refine Recurring Page Skeletons
+- [x] Task: Refine Recurring Page Skeletons (f88f6ae)
     - [ ] Identify the skeleton components used in the `Recurring` page.
     - [ ] Update the page layout to render headers, tabs, and action buttons statically.
     - [ ] Implement granular skeletons that only occupy the table body area during data fetch.
