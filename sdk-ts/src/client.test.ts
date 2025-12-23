@@ -33,6 +33,21 @@ describe('Montra SDK', () => {
         })
       );
     });
+
+    it('should list customers', async () => {
+      const mockCustomers = [{ id: 'cust_1', name: 'Test', email: 'test@test.com' }];
+      vi.mocked(fetch).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true, data: mockCustomers }),
+      } as any);
+
+      const result = await client.listCustomers();
+      expect(result).toEqual(mockCustomers);
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringContaining('/customers'),
+        expect.any(Object)
+      );
+    });
   });
 
   describe('Usage', () => {
@@ -61,6 +76,38 @@ describe('Montra SDK', () => {
 
       const result = await client.checkEntitlement('cust_1', 'tokens');
       expect(result).toEqual(mockCheck);
+    });
+  });
+
+  describe('Invoices', () => {
+    it('should list invoices', async () => {
+      const mockInvoices = [{ id: 'inv_1', amount: 1000 }];
+      vi.mocked(fetch).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true, data: mockInvoices }),
+      } as any);
+
+      const result = await client.listInvoices();
+      expect(result).toEqual(mockInvoices);
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringContaining('/invoices'),
+        expect.any(Object)
+      );
+    });
+
+    it('should get an invoice', async () => {
+      const mockInvoice = { id: 'inv_1', amount: 1000 };
+      vi.mocked(fetch).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true, data: mockInvoice }),
+      } as any);
+
+      const result = await client.getInvoice('inv_1');
+      expect(result).toEqual(mockInvoice);
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringContaining('/invoices/inv_1'),
+        expect.any(Object)
+      );
     });
   });
 });

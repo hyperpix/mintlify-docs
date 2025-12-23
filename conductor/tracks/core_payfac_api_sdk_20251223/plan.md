@@ -15,10 +15,10 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Customer & Billing APIs' (Protocol in workflow.md) [checkpoint: b95429f]
 
 ## Phase 3: Server-Side SDK Development
-- [ ] Task: Scaffold the TypeScript SDK structure.
-- [ ] Task: Implement SDK methods for usage reporting, customer management, and billing.
-- [ ] Task: Implement SDK method for entitlement/usage checking.
-- [ ] Task: Create a sample integration script using the SDK.
+- [x] Task: Scaffold the TypeScript SDK structure. [ec13d75]
+- [x] Task: Implement SDK methods for usage reporting, customer management, and billing. [360b836]
+- [x] Task: Implement SDK method for entitlement/usage checking. [360b836]
+- [x] Task: Create a sample integration script using the SDK. [2a2bb56]
 - [ ] Task: Conductor - User Manual Verification 'Phase 3: SDK Development' (Protocol in workflow.md)
 
 ## Phase 4: Checkout Infrastructure & Client SDK
