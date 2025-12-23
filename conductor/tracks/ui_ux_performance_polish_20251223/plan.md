@@ -23,7 +23,7 @@ Goal: Achieve "instant" perceived loading for metadata and core organization set
     - [ ] Identify if the pricing model name can be passed via URL/state or fetched separately and faster.
     - [ ] Minimize the loading state for the page header to improve perceived speed.
     - [ ] Ensure the "Free Plan" and other core model data are fetched with higher priority.
-- [ ] Task: Accelerate Settings Page Data Loading
+- [x] Task: Accelerate Settings Page Data Loading (ad27222)
     - [ ] Review the `SettingsPage` loading logic (currently fetches profile, api keys, and apps in one large `Promise.all`).
     - [ ] Split the fetching logic so "Organization" and "Address" data are rendered immediately upon availability.
     - [ ] Optimize the database query or server action for merchant profiles if necessary.
