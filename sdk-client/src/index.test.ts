@@ -1,5 +1,6 @@
+// @vitest-environment jsdom
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { loadMontra } from './index';
+import { loadMontra, PaymentElement } from './index';
 
 describe('Montra Client SDK', () => {
   const publishableKey = 'pk_test_123';
@@ -11,6 +12,10 @@ describe('Montra Client SDK', () => {
 
   it('should initialize with a publishable key', () => {
     expect(montra).toBeDefined();
+  });
+
+  it('should export PaymentElement', () => {
+    expect(PaymentElement).toBeDefined();
   });
 
   it('should initialize checkout and return mount/unmount methods', async () => {

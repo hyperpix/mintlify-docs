@@ -1,4 +1,5 @@
 import { MontraCheckoutOptions, IMontraCheckout } from './types';
+export { PaymentElement } from './components/PaymentElement';
 
 export class MontraCheckout {
   private publishableKey: string;
@@ -27,8 +28,6 @@ export class MontraCheckout {
           throw new Error('Mount element not found');
         }
 
-        // For now, we'll just mount an iframe pointing to our checkout URL
-        // In the future, this might be a complex React component or a specialized payment element
         iframe = document.createElement('iframe');
         iframe.src = `http://localhost:3000/pay/${sessionId}?pk=${this.publishableKey}`;
         iframe.style.width = '100%';
