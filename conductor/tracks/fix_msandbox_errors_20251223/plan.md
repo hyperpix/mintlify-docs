@@ -1,7 +1,7 @@
 # Plan: run the msandbox-backup without errors
 
 ## Phase 1: Resolve Build Errors
-- [~] Task: Revert `msandbox-backup/app/api/v1/checkout-links/route.ts` and `msandbox-backup/app/api/v1/customers/route.ts` to their last known good state.
+- [x] Task: Revert `msandbox-backup/app/api/v1/checkout-links/route.ts` and `msandbox-backup/app/api/v1/customers/route.ts` to their last known good state. [4b09a46]
 - [ ] Task: Identify and fix TypeScript `Type 'any[]' is not assignable to type 'void'` errors in `msandbox-backup/app/api/v1/checkout-links/route.ts` by explicitly typing `ApiResponse` generics.
 - [ ] Task: Identify and fix TypeScript `Type 'any[]' is not assignable to type 'void'` errors in `msandbox-backup/app/api/v1/customers/route.ts` by explicitly typing `ApiResponse` generics.
 - [ ] Task: Conduct a full project build (`pnpm run build` in `msandbox-backup`) to confirm resolution of all build errors.
