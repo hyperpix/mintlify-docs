@@ -13,7 +13,7 @@ Goal: Enhance navigation and loading feedback for Invoices and Recurring payment
     - [ ] Identify the skeleton components used in the `Recurring` page.
     - [ ] Update the page layout to render headers, tabs, and action buttons statically.
     - [ ] Implement granular skeletons that only occupy the table body area during data fetch.
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Dashboard UI Polish' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Dashboard UI Polish' (Protocol in workflow.md) (65cb00f)
 
 ## Phase 2: Performance & Data Fetching Optimization
 Goal: Achieve "instant" perceived loading for metadata and core organization settings.
