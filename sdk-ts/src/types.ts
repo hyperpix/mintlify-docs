@@ -32,6 +32,7 @@ export interface EntitlementCheck {
   has_access: boolean;
   usage: number;
   limit: number | null;
+  type?: 'meter' | 'feature';
   reason?: string;
 }
 
@@ -41,5 +42,16 @@ export interface Invoice {
   amount_due: number;
   currency: string;
   status: string;
+  created_at: string;
+}
+
+export interface Feature {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  type: string;
+  status: string;
+  pricing_model_id: string;
   created_at: string;
 }

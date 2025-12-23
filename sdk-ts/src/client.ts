@@ -4,7 +4,8 @@ import {
   Customer, 
   UsagePayload, 
   EntitlementCheck, 
-  Invoice 
+  Invoice,
+  Feature
 } from './types';
 
 export class Montra {
@@ -77,6 +78,27 @@ export class Montra {
 
   async getInvoice(id: string): Promise<Invoice> {
     const res = await this.request<ApiResponse<Invoice>>(`/invoices/${id}`);
+    return res.data!;
+  }
+
+  // Features
+  async listFeatures(): Promise<Feature[]> {
+    const res = await this.request<ApiResponse<Feature[]>>('/features');
+    return res.data!;
+  }
+
+  async createFeature(data: {
+    name: string;
+    slug: string;
+    description?: string;
+    pricing_model_id: string;
+    type?: string;
+    status?: string;
+  }): Promise<Feature> {
+    const res = await this.request<ApiResponse<Feature>>('/features', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
     return res.data!;
   }
 }
