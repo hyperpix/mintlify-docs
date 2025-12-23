@@ -1,11 +1,10 @@
-# Project Tracks
-
-This file tracks all major tracks for the project. Each track has its own detailed plan in its respective folder.
 
 ---
 
+## [~] Track: run the msandbox-backup without errors
+*Link: [./conductor/tracks/fix_msandbox_errors_20251223/](./conductor/tracks/fix_msandbox_errors_20251223/)*
+
 ---
 
-## [x] Track: API Surface Expansion
-*Link: [./conductor/tracks/api_surface_expansion_20251223/](./conductor/tracks/api_surface_expansion_20251223/)*
-*Link: [./conductor/tracks/analytics_logic_refinement_20251223/](./conductor/tracks/analytics_logic_refinement_20251223/)*
+## [ ] Track: ERR_PNPM_OUTDATED_LOCKFILE: Synchronize pnpm-lock.yaml with package.json
+*Link: [./conductor/tracks/fix_pnpm_lockfile_20251223/](./conductor/tracks/fix_pnpm_lockfile_20251223/)*

@@ -1,0 +1,8 @@
+{
+  "track_id": "ui_validation_fixes_20251223",
+  "type": "bug",
+  "status": "new",
+  "created_at": "2025-12-23T16:34:00Z",
+  "updated_at": "2025-12-23T16:34:00Z",
+  "description": "Fix amount input validation error and desktop layout shift (white bar on right) when clicking buttons/dropdowns."
+}
