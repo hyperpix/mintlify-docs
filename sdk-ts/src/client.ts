@@ -7,6 +7,7 @@ import {
   Invoice,
   Feature
 } from './types';
+import { DEFAULT_BASE_URL } from './constants';
 
 export class Montra {
   private apiKey: string;
@@ -14,7 +15,7 @@ export class Montra {
 
   constructor(options: MontraOptions) {
     this.apiKey = options.apiKey;
-    this.baseUrl = options.baseUrl || 'http://localhost:3000/api/v1';
+    this.baseUrl = options.baseUrl || DEFAULT_BASE_URL;
   }
 
   private async request<T>(path: string, options: RequestInit = {}): Promise<T> {

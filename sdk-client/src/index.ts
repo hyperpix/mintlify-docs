@@ -1,11 +1,14 @@
 import { MontraCheckoutOptions, IMontraCheckout } from './types';
+import { DEFAULT_CHECKOUT_URL } from './constants';
 export { PaymentElement } from './components/PaymentElement';
 
 export class MontraCheckout {
   private publishableKey: string;
+  private checkoutUrl: string;
 
   constructor(options: MontraCheckoutOptions) {
     this.publishableKey = options.publishableKey;
+    this.checkoutUrl = options.checkoutUrl || DEFAULT_CHECKOUT_URL;
   }
 
   async initializeCheckout(sessionId: string): Promise<IMontraCheckout> {
@@ -29,7 +32,7 @@ export class MontraCheckout {
         }
 
         iframe = document.createElement('iframe');
-        iframe.src = `http://localhost:3000/pay/${sessionId}?pk=${this.publishableKey}`;
+        iframe.src = `${this.checkoutUrl}/pay/${sessionId}?pk=${this.publishableKey}`;
         iframe.style.width = '100%';
         iframe.style.height = '600px';
         iframe.style.border = 'none';

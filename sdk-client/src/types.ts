@@ -1,6 +1,7 @@
-export type MontraCheckoutOptions = {
+export interface MontraCheckoutOptions {
   publishableKey: string;
-};
+  checkoutUrl?: string;
+}
 
 export type CheckoutSessionResponse = {
   id: string;

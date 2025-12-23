@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { IMontraCheckout } from '../types';
+import { DEFAULT_CHECKOUT_URL } from '../constants';
 
 export type PaymentElementProps = {
   sessionId: string;
+  checkoutUrl?: string;
   onSuccess?: (data: any) => void;
   onError?: (error: Error) => void;
 };
@@ -14,13 +16,14 @@ export type PaymentElementProps = {
  */
 export const PaymentElement: React.FC<PaymentElementProps> = ({ 
   sessionId, 
+  checkoutUrl = DEFAULT_CHECKOUT_URL,
   onSuccess, 
   onError 
 }) => {
   const [loading, setLoading] = useState(true);
 
   // We'll use the hosted checkout page in an iframe
-  const checkoutUrl = `http://localhost:3000/pay/${sessionId}`;
+  const finalCheckoutUrl = `${checkoutUrl}/pay/${sessionId}`;
 
   return (
     <div 
@@ -33,7 +36,7 @@ export const PaymentElement: React.FC<PaymentElementProps> = ({
       }}
     >
       <iframe
-        src={checkoutUrl}
+        src={finalCheckoutUrl}
         title="Montra Checkout"
         style={{
           width: '100%',
