@@ -45,12 +45,42 @@ await montra.reportUsage({
 
 ## Entitlements
 
-Check if a customer has access to a specific feature or meter.
+Check if a customer has access to a specific meter or feature toggle.
 
+### Check Meter Quota
 ```typescript
-const entitlement = await montra.checkEntitlement('cust_123', 'premium-feature');
+const quota = await montra.checkEntitlement('cust_123', 'api-tokens');
 
-if (entitlement.has_access) {
-  // Grant access
+if (quota.has_access) {
+  console.log(`Usage: ${quota.usage}/${quota.limit}`);
 }
 ```
+
+### Check Feature Access
+```typescript
+const sso = await montra.checkFeatureAccess('cust_123', 'sso');
+
+if (sso.has_access) {
+  // Show SSO login button
+}
+```
+
+## Features
+
+Manage features programmatically.
+
+### List Features
+```typescript
+const features = await montra.listFeatures();
+```
+
+### Create Feature
+```typescript
+const feature = await montra.createFeature({
+  name: 'Beta Access',
+  slug: 'beta',
+  pricing_model_id: 'pm_123',
+  type: 'Toggle'
+});
+```
+

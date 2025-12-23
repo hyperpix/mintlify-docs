@@ -51,6 +51,15 @@
         "sdk-reference/react-nextjs",
         "sdk-reference/express"
       ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/customers",
+        "api-reference/usage",
+        "api-reference/features",
+        "api-reference/entitlements"
+      ]
     }
   ],
   "footerSocials": {
