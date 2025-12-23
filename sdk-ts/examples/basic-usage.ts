@@ -36,8 +36,13 @@ async function main() {
     console.log('Current usage:', entitlement.usage);
     console.log('Limit:', entitlement.limit || 'Unlimited');
 
-    // 4. List invoices
-    console.log('\n4. Listing invoices...');
+    // 4. Check feature access
+    console.log('\n4. Checking feature access...');
+    const ssoAccess = await montra.checkFeatureAccess(customer.id, 'sso');
+    console.log('Has SSO access:', ssoAccess.has_access);
+
+    // 5. List invoices
+    console.log('\n5. Listing invoices...');
     const invoices = await montra.listInvoices();
     console.log('Found', invoices.length, 'invoices');
 

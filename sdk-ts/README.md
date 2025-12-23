@@ -25,6 +25,19 @@ const montra = new Montra({
 export async function getInvoices() {
   return await montra.listInvoices();
 }
+
+// Check if customer has access to a feature or has enough quota
+export async function checkAccess(customerId: string) {
+  // Check usage-based entitlement
+  const quota = await montra.checkEntitlement(customerId, 'tokens');
+  if (!quota.has_access) {
+    throw new Error('Quota exceeded');
+  }
+
+  // Check feature toggle
+  const sso = await montra.checkFeatureAccess(customerId, 'sso');
+  return sso.has_access;
+}
 ```
 
 ### Express Middleware

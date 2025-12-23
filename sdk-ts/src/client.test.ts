@@ -76,6 +76,25 @@ describe('Montra SDK', () => {
 
       const result = await client.checkEntitlement('cust_1', 'tokens');
       expect(result).toEqual(mockCheck);
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringContaining('/entitlements?customer_id=cust_1&meter=tokens'),
+        expect.any(Object)
+      );
+    });
+
+    it('should check feature access', async () => {
+      const mockCheck = { has_access: true, type: 'feature' };
+      vi.mocked(fetch).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true, data: mockCheck }),
+      } as any);
+
+      const result = await client.checkFeatureAccess('cust_1', 'sso');
+      expect(result).toEqual(mockCheck);
+      expect(fetch).toHaveBeenCalledWith(
+        expect.stringContaining('/entitlements?customer_id=cust_1&feature=sso'),
+        expect.any(Object)
+      );
     });
   });
 

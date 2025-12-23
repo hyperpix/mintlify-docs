@@ -30,8 +30,8 @@ export interface UsagePayload {
 
 export interface EntitlementCheck {
   has_access: boolean;
-  usage: number;
-  limit: number | null;
+  usage?: number;
+  limit?: number | null;
   type?: 'meter' | 'feature';
   reason?: string;
 }

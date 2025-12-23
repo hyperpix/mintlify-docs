@@ -71,6 +71,13 @@ export class Montra {
     return res.data!;
   }
 
+  async checkFeatureAccess(customerId: string, featureSlug: string): Promise<EntitlementCheck> {
+    const res = await this.request<ApiResponse<EntitlementCheck>>(
+      `/entitlements?customer_id=${customerId}&feature=${featureSlug}`
+    );
+    return res.data!;
+  }
+
   // Invoices
   async listInvoices(): Promise<Invoice[]> {
     const res = await this.request<ApiResponse<Invoice[]>>('/invoices');
