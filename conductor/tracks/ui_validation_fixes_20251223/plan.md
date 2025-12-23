@@ -1,6 +1,6 @@
 # Plan: UI and Validation Fixes
 
-## Phase 1: Amount Input Validation Fix
+## Phase 1: Amount Input Validation Fix [checkpoint: f168023]
 - [x] Task: Audit codebase for `input` elements with `pattern` or `type="number"` used for amounts.
 - [x] Task: Fix validation logic to support decimals and whole numbers across all amount inputs.
 - [x] Task: Verify fix with unit tests for various currency formats (e.g., "100", "100.00", "0.5").
