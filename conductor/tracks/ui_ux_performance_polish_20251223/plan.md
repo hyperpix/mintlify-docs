@@ -23,7 +23,7 @@ Goal: Achieve "instant" perceived loading for metadata and core organization set
     - [ ] Identify if the pricing model name can be passed via URL/state or fetched separately and faster.
     - [ ] Minimize the loading state for the page header to improve perceived speed.
     - [ ] Ensure the "Free Plan" and other core model data are fetched with higher priority.
-- [x] Task: Accelerate Settings Page Data Loading (ad27222)
+- [x] Task: Accelerate Settings Page Data Loading (28ec298)
 - [x] Task: Implement Skeletons for Pricing Model Tables (3d29312)
     - [ ] Add `isLoading` state to `PricingModelDetailsClient`.
     - [ ] Update table rendering to show `TablePlaceholder` or inline skeleton rows while `isLoading` is true.
