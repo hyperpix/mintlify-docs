@@ -13,7 +13,7 @@
 - [x] Task: Write tests for event capture logic.
 
 ## Phase 3: Delivery Engine
-- [ ] Task: Implement the delivery worker with retry logic (exponential backoff).
-- [ ] Task: Add timeout and concurrency controls to prevent delivery floods.
-- [ ] Task: Create a "Test Webhook" feature in the API.
-- [ ] Task: Write integration tests for end-to-end delivery.
+- [x] Task: Implement the delivery worker with retry logic (exponential backoff).
+- [x] Task: Add timeout and concurrency controls to prevent delivery floods.
+- [x] Task: Create a "Test Webhook" feature in the API.
+- [x] Task: Write integration tests for end-to-end delivery.
