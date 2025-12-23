@@ -13,7 +13,7 @@ Goal: Ensure complete isolation between merchants and secure public access.
     - [ ] Write tests to verify a merchant cannot list or view another merchant's invoices.
     - [ ] Write tests to verify public (anon) can view a single invoice by UUID.
     - [ ] Update migration to strictly enforce owner-only access and single-record public access.
-- [ ] Task: Global RLS Audit
+- [x] Task: Global RLS Audit (fba1e0f)
     - [ ] Scan all tables (`customers`, `transactions`, `settlements`, etc.) for permissive policies.
     - [ ] Apply strict `merchant_id = auth.uid()` policies to any remaining vulnerable tables.
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Security Hardening' (Protocol in workflow.md)
