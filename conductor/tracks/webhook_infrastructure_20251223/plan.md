@@ -7,10 +7,10 @@
 - [x] Task: Write unit tests for signature generation and endpoint management.
 
 ## Phase 2: Event Capture & Queuing
-- [ ] Task: Define `webhook_events` table to store event history and status.
-- [ ] Task: Implement `triggerWebhook` internal utility to queue events.
-- [ ] Task: Hook into `checkout.completed` and `usage.limit_reached` to emit events.
-- [ ] Task: Write tests for event capture logic.
+- [x] Task: Define `webhook_events` table to store event history and status.
+- [x] Task: Implement `triggerWebhook` internal utility to queue events.
+- [x] Task: Hook into `checkout.completed` and `usage.limit_reached` to emit events.
+- [x] Task: Write tests for event capture logic.
 
 ## Phase 3: Delivery Engine
 - [ ] Task: Implement the delivery worker with retry logic (exponential backoff).
