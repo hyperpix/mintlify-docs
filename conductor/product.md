@@ -16,3 +16,7 @@ A specialized Payment Facilitator (PayFac) and billing platform designed specifi
 # Key Features
 - **Real-time Metering API:** A robust API for high-scale usage event reporting.
 - **Billing Logic:** Native support for credits, overages, and seat management.
+- **Developer SDKs:** TypeScript SDKs for both server-side integration and client-side checkout flows.
+- **Secure Checkout:** Hosted and embedded checkout sessions for secure payment collection.
+- **API-First Infrastructure:** Comprehensive API for customer management, billing, and entitlements.
+- **Webhook Notifications:** Secure, real-time event delivery system for asynchronous merchant notifications.
